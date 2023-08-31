@@ -41,3 +41,29 @@ export const confirmedRemoveFromReadingList = createAction(
   '[Reading List API] Confirmed remove from list',
   props<{ item: ReadingListItem }>()
 );
+
+export const finishFromReadingList = createAction(
+  '[Books Search Results] Finish from list',
+  props<{item: ReadingListItem}>()
+);
+
+export const failedToFinishFromReadingList = createAction(
+  '[Reading List API] Failed To Finish from list',
+  props<{ item: ReadingListItem }>()
+);
+
+export const confirmedFinishFromReadingList = createAction(
+  '[Reading List API] Confirmed To finish from list',
+  props<{ item: ReadingListItem}>()
+);
+
+// export const updateReadingListItem = createAction(
+//   '[Reading List] Update Item',
+//   props<{ index: number; updatedItem: ReadingListItem }>()
+// );
+
+
+export const markAsFinished = createAction(
+  '[Reading List] Mark as Finished',
+  props<{ bookId: string }>()
+);

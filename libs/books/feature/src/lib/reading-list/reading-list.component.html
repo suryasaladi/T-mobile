@@ -11,6 +11,10 @@
       </div>
     </div>
     <div>
+     <button mat-button (click)="markAsFinished(b)" [innerText]="buttonText[b.bookId] || 'Mark as finished'"></button>
+     <p *ngIf="b.finished">{{ b.finishedDate }}</p>
+   </div>
+    <div>
       <button
         mat-icon-button
         color="warn"
@@ -20,7 +24,7 @@
         <mat-icon>remove_circle</mat-icon>
       </button>
     </div>
-  </div>
+  </div> 
 </ng-container>
 </ng-container>
 <ng-template #empty>
